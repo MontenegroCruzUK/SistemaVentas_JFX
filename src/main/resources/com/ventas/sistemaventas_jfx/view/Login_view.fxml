@@ -1,16 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.font.MFXFontIcon?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.ventas.sistemaventas_jfx.controller.Login_Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane fx:id="rootPane" prefHeight="482.0" prefWidth="600.0" styleClass="rootPane" stylesheets="@../css/Main_Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ventas.sistemaventas_jfx.controller.Login_Controller">
+    <children>
+        <Pane layoutX="-4.0" layoutY="3.0" prefHeight="478.0" prefWidth="277.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox alignment="TOP_CENTER" layoutX="1.0" layoutY="29.0" prefHeight="450.0" prefWidth="277.0">
+                    <children>
+                        <ImageView fitHeight="170.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/compras.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets top="50.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Label styleClass="header" text="Sistema Ventas">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label styleClass="menu-label" text="New user">
+                            <VBox.margin>
+                                <Insets top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+            <styleClass>
+                <String fx:value="sidebar_Login" />
+                <String fx:value="sidebar" />
+            </styleClass>
+        </Pane>
+        <Pane layoutX="273.0" prefHeight="489.0" prefWidth="330.0" style="-fx-background-color: #FAFAFA;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
+            <children>
+                <VBox alignment="TOP_CENTER" layoutY="28.0" prefHeight="459.0" prefWidth="327.0">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../img/login.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets bottom="25.0" top="50.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <MFXTextField fx:id="txt_Username" floatMode="BORDER" floatingText="User Name" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="186.0" />
+                        <MFXPasswordField fx:id="txt_Password" floatMode="BORDER" floatingText="Password" minWidth="70.0" prefHeight="40.0" prefWidth="186.0">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </MFXPasswordField>
+                        <MFXButton prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #0288d1; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" stylesheets="@../css/Buttons.css" text="Login">
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin>
+                        </MFXButton>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+        <HBox fx:id="hB_Header" alignment="CENTER_RIGHT" layoutX="-4.0" prefHeight="29.0" prefWidth="607.0" spacing="10.0" style="-fx-background-color: #0288d1;" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-2.0">
+            <padding>
+                <Insets right="5.0" />
+            </padding>
+            <children>
+                <MFXFontIcon fx:id="minimizeIcon" description="mfx-circle" size="15.0" styleClass="minimize-icon" />
+                <MFXFontIcon fx:id="closeIcon" description="mfx-circle" size="15.0" styleClass="close-icon">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin>
+                </MFXFontIcon>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

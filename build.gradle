@@ -35,10 +35,12 @@ javafx {
 }
 
 dependencies {
+    implementation('org.controlsfx:controlsfx:11.1.2')
+    implementation 'io.github.palexdev:materialfx:11.13.9'
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
-    implementation 'io.github.palexdev:materialfx:11.16.1'
+
 }
 
 test {

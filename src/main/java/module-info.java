@@ -2,6 +2,9 @@ module com.ventas.sistemaventas_jfx {
 	requires javafx.controls;
 	requires javafx.fxml;
 	
+	requires org.controlsfx.controls;
+	requires MaterialFX;
+	
 	
 	opens com.ventas.sistemaventas_jfx to javafx.fxml;
 	exports com.ventas.sistemaventas_jfx;
