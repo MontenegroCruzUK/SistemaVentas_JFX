@@ -48,7 +48,7 @@
         </Pane>
         <Pane layoutX="273.0" prefHeight="489.0" prefWidth="330.0" style="-fx-background-color: #FAFAFA;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
             <children>
-                <VBox alignment="TOP_CENTER" layoutY="28.0" prefHeight="459.0" prefWidth="327.0">
+                <VBox alignment="TOP_CENTER" layoutY="28.0" prefHeight="459.0" prefWidth="327.0" styleClass="mfx-font-icon" stylesheets="@../css/TextFields.css">
                     <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -64,7 +64,7 @@
                                 <Insets top="20.0" />
                             </VBox.margin>
                         </MFXPasswordField>
-                        <MFXButton prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #0288d1; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" stylesheets="@../css/Buttons.css" text="Login">
+                        <MFXButton fx:id="btn_Login" onAction="#login" prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #0288d1; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" stylesheets="@../css/Buttons.css" text="Login">
                             <VBox.margin>
                                 <Insets top="25.0" />
                             </VBox.margin>
