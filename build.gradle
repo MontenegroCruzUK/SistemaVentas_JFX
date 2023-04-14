@@ -37,6 +37,7 @@ javafx {
 dependencies {
     implementation('org.controlsfx:controlsfx:11.1.2')
     implementation 'io.github.palexdev:materialfx:11.13.9'
+    implementation 'mysql:mysql-connector-java:8.0.26'
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
