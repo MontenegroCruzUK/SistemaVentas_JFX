@@ -1,5 +1,8 @@
 package com.ventas.sistemaventas_jfx.controller;
 
+import com.ventas.sistemaventas_jfx.model.DataBaseConnection;
+import com.ventas.sistemaventas_jfx.model.Login;
+import com.ventas.sistemaventas_jfx.model.LoginDado;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,6 +45,8 @@ public class Login_Controller implements Initializable {
 	
 	@FXML
 	private MFXFontIcon closeIcon;
+	Login newLogin = new Login ();
+	LoginDado newLoginDado = new LoginDado ();
 	
 	
 	@Override
@@ -55,8 +60,28 @@ public class Login_Controller implements Initializable {
 		minimizeIcon.addEventHandler (MouseEvent.MOUSE_CLICKED,
 			event -> ((Stage) rootPane.getScene ().getWindow ()).setIconified (true));
 	}
-	@FXML
-	void login(ActionEvent event) {
 	
+	@FXML
+	public void login (ActionEvent event) {
+		String username = txt_Username.getText ().trim ();
+		String password = String.valueOf (txt_Password.getText ().trim ());
+		
+		if (username.isEmpty () || password.isEmpty ()) {
+			System.out.println ("Campos vacios");
+			if (username.isEmpty ()) {
+				txt_Username.requestFocus ();
+			} else {
+				txt_Password.requestFocus ();
+			}
+		} else {
+			newLogin = newLoginDado.getLogin (username, password);
+			if (newLogin.getUsername () != null || newLogin.getPassword () != null) {
+				System.out.println ("Estas dentro del sistema Ventas");
+			} else {
+				System.out.println ("NOooooooooo Estas Dentro revisa bien todo");
+				txt_Username.setText ("");
+				txt_Password.setText ("");
+			}
+		}
 	}
 }

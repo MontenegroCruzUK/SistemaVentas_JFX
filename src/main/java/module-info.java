@@ -4,6 +4,7 @@ module com.ventas.sistemaventas_jfx {
 	
 	requires org.controlsfx.controls;
 	requires MaterialFX;
+	requires java.sql;
 	
 	
 	opens com.ventas.sistemaventas_jfx to javafx.fxml;
