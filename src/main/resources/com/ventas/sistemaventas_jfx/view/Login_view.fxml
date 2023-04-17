@@ -48,14 +48,14 @@
         </Pane>
         <Pane layoutX="273.0" prefHeight="489.0" prefWidth="330.0" style="-fx-background-color: #FAFAFA;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-1.0">
             <children>
-                <VBox alignment="TOP_CENTER" layoutY="28.0" prefHeight="459.0" prefWidth="327.0" styleClass="mfx-font-icon" stylesheets="@../css/TextFields.css">
+                <VBox alignment="TOP_CENTER" layoutY="28.0" prefHeight="459.0" prefWidth="327.0" stylesheets="@../css/TextFields.css">
                     <children>
                         <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../img/login.png" />
                             </image>
                             <VBox.margin>
-                                <Insets bottom="25.0" top="50.0" />
+                                <Insets bottom="25.0" top="20.0" />
                             </VBox.margin>
                         </ImageView>
                         <MFXTextField fx:id="txt_Username" floatMode="BORDER" floatingText="User Name" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="186.0" />
@@ -64,16 +64,25 @@
                                 <Insets top="20.0" />
                             </VBox.margin>
                         </MFXPasswordField>
+                  <Label fx:id="lb_Mensaje" alignment="CENTER" prefHeight="21.0" prefWidth="301.0" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
                         <MFXButton fx:id="btn_Login" onAction="#login" prefHeight="39.0" prefWidth="161.0" style="-fx-background-color: #0288d1; -fx-font-size: 15px; -fx-text-fill: #FFFFFF;" styleClass="mfx-button" stylesheets="@../css/Buttons.css" text="Login">
                             <VBox.margin>
                                 <Insets top="25.0" />
                             </VBox.margin>
                         </MFXButton>
                     </children>
+               <styleClass>
+                  <String fx:value="mfx-font-icon" />
+                  <String fx:value="header-label" />
+               </styleClass>
                 </VBox>
             </children>
         </Pane>
-        <HBox fx:id="hB_Header" alignment="CENTER_RIGHT" layoutX="-4.0" prefHeight="29.0" prefWidth="607.0" spacing="10.0" style="-fx-background-color: #0288d1;" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-2.0">
+        <HBox fx:id="hB_Header" alignment="CENTER_RIGHT" layoutX="-4.0" prefHeight="29.0" prefWidth="607.0" spacing="10.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-2.0">
             <padding>
                 <Insets right="5.0" />
             </padding>

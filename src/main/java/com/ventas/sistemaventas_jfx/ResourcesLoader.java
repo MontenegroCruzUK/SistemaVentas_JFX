@@ -1,4 +1,4 @@
-package com.ventas.sistemaventas_jfx.model;
+package com.ventas.sistemaventas_jfx;
 
 import java.io.InputStream;
 import java.net.URL;
