@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="387.0" layoutY="290.0" text="Nueva Venta">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="348.0" layoutY="236.0" prefHeight="214.0" prefWidth="321.0" spacing="20.0">
+         <children>
+            <HBox spacing="150.0">
+               <children>
+                  <MFXTextField fx:id="txt_Id" floatMode="BORDER" floatingText="Id" minWidth="56.0" prefColumnCount="5" prefHeight="38.0" prefWidth="93.0" />
+                  <MFXTextField fx:id="txt_Ruc" floatMode="BORDER" floatingText="RUC" minWidth="63.0" prefColumnCount="5" prefHeight="38.0" prefWidth="82.0" />
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <MFXTextField fx:id="txt_Nombre" floatMode="BORDER" floatingText="Nombre" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="148.0" />
+                  <MFXTextField fx:id="txt_Telefono" floatMode="BORDER" floatingText="Télefono" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="153.0" />
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                  <MFXTextField fx:id="txt_Direccion" floatMode="BORDER" floatingText="Dirección" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="164.0" />
+                  <MFXTextField fx:id="txt_RazonSocial" floatMode="BORDER" floatingText="Razón Social" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="176.0" />
+               </children>
+            </HBox>
+            <MFXButton fx:id="btn_Actualizar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Actualizar" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

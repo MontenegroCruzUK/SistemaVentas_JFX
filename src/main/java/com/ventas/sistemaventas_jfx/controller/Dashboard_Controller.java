@@ -103,8 +103,28 @@ public class Dashboard_Controller implements Initializable {
 		
 		loader.addView (MFXLoaderBean.of ("Nueva Venta",
 			ResourcesLoader.loadURL ("view/NuevaVenta_view.fxml")).setBeanToNodeMapper (() -> {
-			return this.createToggle ("mfx-folder", "Nueva Venta");
+			return this.createToggle ("mfx-square-pen", "Nueva Venta");
 		}).setDefaultRoot (true).get ());
+		
+		loader.addView (
+			MFXLoaderBean.of ("Clientes", ResourcesLoader.loadURL ("view/Clientes_view.fxml")).setBeanToNodeMapper (
+				() -> createToggle ("mfx-users", "Clientes")).get ());
+		
+		loader.addView (MFXLoaderBean.of ("Proveedores",
+			ResourcesLoader.loadURL ("view/Proveedores_view.fxml")).setBeanToNodeMapper (
+			() -> createToggle ("mfx-spreadsheet", "Proveedores")).get ());
+		
+		loader.addView (MFXLoaderBean.of ("Productos",
+			ResourcesLoader.loadURL ("view/Productos_view.fxml")).setBeanToNodeMapper (
+			() -> createToggle ("mfx-square-list", "Productos")).get ());
+		
+		loader.addView (
+			MFXLoaderBean.of ("Ventas", ResourcesLoader.loadURL ("view/Ventas_view.fxml")).setBeanToNodeMapper (
+				() -> createToggle ("mfx-google-fusion-tables", "Ventas")).get ());
+		
+		loader.addView (MFXLoaderBean.of ("Configuracion",
+			ResourcesLoader.loadURL ("view/Configuracion_view.fxml")).setBeanToNodeMapper (
+			() -> createToggle ("mfx-gear", "Configuración")).get ());
 		
 		loader.setOnLoadedAction ((beans) -> {
 			List<ToggleButton> nodes = beans.stream ().map ((bean) -> {
@@ -121,8 +141,6 @@ public class Dashboard_Controller implements Initializable {
 			}).toList ();
 			this.navBar.getChildren ().setAll (nodes);
 		});
-		
-		
 		loader.start ();
 	}
 	

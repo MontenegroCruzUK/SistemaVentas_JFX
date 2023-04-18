@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" styleClass="rootPane" stylesheets="@../css/Main_Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ventas.sistemaventas_jfx.controller.Dashboard_Controller">
-    
+
     <HBox fx:id="hB_Header" alignment="TOP_RIGHT" layoutX="2.0" layoutY="2.0" prefHeight="31.0" prefWidth="1278.0" spacing="10.0" AnchorPane.bottomAnchor="688.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
         <MFXFontIcon fx:id="alwaysOnTopIcon" description="mfx-circle" size="15.0" styleClass="always-on-top-icon" />

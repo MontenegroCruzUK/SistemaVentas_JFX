@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="387.0" layoutY="290.0" text="Nueva Venta">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Label>
+      <Pane prefHeight="70.0" prefWidth="1017.0" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="70.0" prefWidth="1001.0" spacing="10.0">
+               <children>
+                  <MFXTextField fx:id="txt_Codigo" floatMode="BORDER" floatingText="Código" minWidth="63.0" prefColumnCount="5" prefHeight="40.0" prefWidth="63.0" />
+                  <MFXTextField fx:id="txt_IdProducto" floatMode="BORDER" floatingText="Id Producto" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="90.0" />
+                  <MFXTextField fx:id="txt_NombreProducto" floatMode="BORDER" floatingText="Nombre Producto" minWidth="56.0" prefColumnCount="5" prefHeight="40.0" prefWidth="271.0" />
+                  <MFXTextField fx:id="txt_Cantidad" floatMode="BORDER" floatingText="Cantidad" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="95.0" />
+                  <MFXTextField fx:id="txt_Precio" floatMode="BORDER" floatingText="Precio" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="84.0" />
+                  <MFXTextField fx:id="txt_Stock" floatMode="BORDER" floatingText="Stock" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="78.0" />
+                  <MFXButton fx:id="btn_Guardar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Guardar" />
+                  <MFXButton fx:id="btn_Actualizar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Actualizar" />
+                  <MFXButton fx:id="btn_Eliminar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Eliminar" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="69.0" prefHeight="522.0" prefWidth="1017.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+         <children>
+            <TableView fx:id="tbl_NuevaVenta" layoutX="-2.0" layoutY="2.0" prefHeight="616.0" prefWidth="1017.0">
+               <columns>
+                  <TableColumn fx:id="tc_Codigo" prefWidth="133.99996948242188" text="Código" />
+                  <TableColumn fx:id="tc_Descripcion" prefWidth="304.0" text="Descripción" />
+                  <TableColumn fx:id="tc_Cantidad" prefWidth="197.0" text="Cantidad" />
+                  <TableColumn fx:id="tc_PrecioUnidad" prefWidth="214.0" text="Precio Unidad" />
+                  <TableColumn fx:id="tc_Total" prefWidth="166.0" text="Total" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane prefHeight="70.0" prefWidth="1017.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="1001.0" spacing="10.0">
+               <children>
+                  <MFXTextField fx:id="txt_DniRuc" floatMode="BORDER" floatingText="DNI RUC" minWidth="63.0" prefColumnCount="5" prefHeight="40.0" prefWidth="63.0" />
+                  <MFXTextField fx:id="txt_Nombre" floatMode="BORDER" floatingText="Nombre" minWidth="56.0" prefColumnCount="5" prefHeight="40.0" prefWidth="132.0" />
+                  <MFXTextField fx:id="txt_Telefono" floatMode="BORDER" floatingText="Télefono" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="80.0" />
+                  <MFXTextField fx:id="txt_Direccion" floatMode="BORDER" floatingText="Dirección" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="145.0" />
+                  <MFXTextField fx:id="txt_RazonSocial" floatMode="BORDER" floatingText="Razón Social" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="135.0" />
+                  <MFXButton fx:id="btn_GenerarVentas" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Generar Ventas" />
+                  <Label prefHeight="29.0" prefWidth="116.0" text="Total A Pagar:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_TotalPagar" prefHeight="29.0" prefWidth="120.0" text="..........................." textAlignment="RIGHT">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

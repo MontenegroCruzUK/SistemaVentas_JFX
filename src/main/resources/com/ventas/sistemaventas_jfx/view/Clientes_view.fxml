@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="387.0" layoutY="290.0" text="Clientes">
-         <font>
-            <Font size="43.0" />
-         </font>
-      </Label>
+      <Pane prefHeight="70.0" prefWidth="1017.0" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="70.0" prefWidth="1001.0" spacing="10.0">
+               <children>
+                  <MFXTextField fx:id="txt_Ruc" floatMode="BORDER" floatingText="RUC" minWidth="63.0" prefColumnCount="5" prefHeight="40.0" prefWidth="63.0" />
+                  <MFXTextField fx:id="txt_Id" floatMode="BORDER" floatingText="Id" minWidth="56.0" prefColumnCount="5" prefHeight="40.0" prefWidth="56.0" />
+                  <MFXTextField fx:id="txt_Nombre" floatMode="BORDER" floatingText="Nombre" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="139.0" />
+                  <MFXTextField fx:id="txt_Telefono" floatMode="BORDER" floatingText="Télefono" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="104.0" />
+                  <MFXTextField fx:id="txt_Direccion" floatMode="BORDER" floatingText="Dirección" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="149.0" />
+                  <MFXTextField fx:id="txt_RazonSocial" floatMode="BORDER" floatingText="Razón Social" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="172.0" />
+                  <MFXButton fx:id="btn_Guardar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Guardar" />
+                  <MFXButton fx:id="btn_Actualizar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Actualizar" />
+                  <MFXButton fx:id="btn_Eliminar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Eliminar" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="69.0" prefHeight="189.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+         <children>
+            <TableView fx:id="tbl_Clientes" layoutX="-2.0" layoutY="2.0" prefHeight="616.0" prefWidth="1017.0">
+               <columns>
+                  <TableColumn fx:id="tc_Id" prefWidth="95.99996948242188" text="ID" />
+                  <TableColumn fx:id="tc_Ruc" prefWidth="109.0" text="RUC" />
+                  <TableColumn fx:id="tc_Nombre" prefWidth="147.0" text="Nombre" />
+                  <TableColumn fx:id="tc_Telefono" prefWidth="221.0" text="Télefono" />
+                  <TableColumn fx:id="tc_Direccion" prefWidth="241.0" text="Dirección" />
+                  <TableColumn fx:id="tc_RazonSocial" prefWidth="202.0" text="Razón Social" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
