@@ -1,32 +1,32 @@
 package com.ventas.sistemaventas_jfx.model;
 
 public class Login {
-	private int id_user;
-	private String username;
+	private int id_vendedor;
+	private String correo;
 	private String password;
 	
 	public Login () {}
 	
-	public Login (int id_user, String username, String password) {
-		this.id_user = id_user;
-		this.username = username;
+	public Login (int id_vendedor, String correo, String password) {
+		this.id_vendedor = id_vendedor;
+		this.correo = correo;
 		this.password = password;
 	}
 	
-	public int getId_user () {
-		return id_user;
+	public int getId_vendedor () {
+		return id_vendedor;
 	}
 	
-	public void setId_user (int id_user) {
-		this.id_user = id_user;
+	public void setId_vendedor (int id_vendedor) {
+		this.id_vendedor = id_vendedor;
 	}
 	
-	public String getUsername () {
-		return username;
+	public String getCorreo () {
+		return correo;
 	}
 	
-	public void setUsername (String username) {
-		this.username = username;
+	public void setCorreo (String correo) {
+		this.correo = correo;
 	}
 	
 	public String getPassword () {

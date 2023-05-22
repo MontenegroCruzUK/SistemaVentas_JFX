@@ -9,7 +9,7 @@ public class LoginDado {
 	private Connection connection;
 	private PreparedStatement ps;
 	private ResultSet rs;
-	private final String QUERRY = "SELECT * FROM users WHERE username = ? AND password = ?";
+	private final String QUERRY = "SELECT * FROM vendedor WHERE correo = ? AND password = ?";
 	DataBaseConnection myConnection = new DataBaseConnection ();
 	Login newLogin = new Login ();
 	
@@ -22,12 +22,12 @@ public class LoginDado {
 			rs = ps.executeQuery ();
 			
 			if (rs.next ()) {
-				newLogin.setUsername (rs.getString ("username"));
+				newLogin.setCorreo (rs.getString ("correo"));
 				newLogin.setPassword (rs.getString ("password"));
 			}
 			System.out.println ("Todo salio bien");
 		} catch (SQLException e) {
-			System.out.println ("Broblema con la base de datos\n" + e.getMessage ());
+			System.out.println ("Problemas con la base de datos\n" + e.getMessage ());
 		}
 		return newLogin;
 		

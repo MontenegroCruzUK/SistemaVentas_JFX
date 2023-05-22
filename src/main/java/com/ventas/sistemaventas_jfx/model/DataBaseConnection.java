@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 public class DataBaseConnection {
 	// Detalles de la base de datos
-	static final String DB_URL = "jdbc:mysql://localhost:3306/db_ventas";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/db_sistema_ventas";
 	static final String USER = "root";
 	static final String PASS = "";
 	

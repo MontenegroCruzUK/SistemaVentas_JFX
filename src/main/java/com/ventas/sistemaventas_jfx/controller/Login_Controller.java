@@ -62,7 +62,10 @@ public class Login_Controller implements Initializable {
 	@Override
 	public void initialize (URL location, ResourceBundle resources) {
 		actionButtonHeader ();
+		txt_Username.setText ("montenegro@gmail.com");
+		txt_Password.setText ("123456");
 	}
+	
 	
 	private void actionButtonHeader () {
 		closeIcon.addEventHandler (javafx.scene.input.MouseEvent.MOUSE_CLICKED, event -> Platform.exit ());
@@ -94,7 +97,7 @@ public class Login_Controller implements Initializable {
 			}
 		} else {
 			newLogin = newLoginDado.getLogin (username, password);
-			if (newLogin.getUsername () != null || newLogin.getPassword () != null) {
+			if (newLogin.getCorreo () != null || newLogin.getPassword () != null) {
 				try {
 					Stage stage = new Stage ();
 					FXMLLoader loader = new FXMLLoader (ResourcesLoader.loadURL ("view/Dashboard_view.fxml"));
