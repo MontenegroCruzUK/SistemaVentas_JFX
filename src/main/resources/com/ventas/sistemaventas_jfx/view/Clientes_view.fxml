@@ -10,15 +10,15 @@
             <children>
                 <HBox alignment="CENTER" layoutX="14.0" layoutY="4.0" prefHeight="70.0" prefWidth="1001.0" spacing="10.0">
                     <children>
+                        <MFXTextField fx:id="txt_Id" editable="false" floatMode="BORDER" floatingText="Id" minWidth="56.0" prefColumnCount="5" prefHeight="40.0" prefWidth="56.0" />
                         <MFXTextField fx:id="txt_Dni" floatMode="BORDER" floatingText="DNI" minWidth="63.0" prefColumnCount="5" prefHeight="40.0" prefWidth="63.0" />
-                        <MFXTextField fx:id="txt_Id" floatMode="BORDER" floatingText="Id" minWidth="56.0" prefColumnCount="5" prefHeight="40.0" prefWidth="56.0" />
                         <MFXTextField fx:id="txt_Nombre" floatMode="BORDER" floatingText="Nombre" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="139.0" />
                         <MFXTextField fx:id="txt_Telefono" floatMode="BORDER" floatingText="Télefono" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="104.0" />
                         <MFXTextField fx:id="txt_Direccion" floatMode="BORDER" floatingText="Dirección" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="149.0" />
                         <MFXTextField fx:id="txt_RazonSocial" floatMode="BORDER" floatingText="Razón Social" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="172.0" />
                         <MFXButton fx:id="btn_Guardar" onAction="#agregarNuevoCliente" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Guardar" />
-                        <MFXButton fx:id="btn_Actualizar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Actualizar" />
-                        <MFXButton fx:id="btn_Eliminar" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Eliminar" />
+                        <MFXButton fx:id="btn_Actualizar" onAction="#actualizarCliente" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Actualizar" />
+                        <MFXButton fx:id="btn_Eliminar" onAction="#eliminarCliente" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Eliminar" />
                     </children>
                 </HBox>
             </children>
