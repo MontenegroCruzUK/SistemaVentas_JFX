@@ -75,22 +75,23 @@ public class ClienteDado {
 	}
 	
 	public boolean modificarCliente (Cliente cliente) {
-		String sql = "UPDATE clientes SET dni=?, nombre=?, telefono=?, direccion=?, razon_social=? WHERE id_cliente=?";
+		String sql =
+			"UPDATE clientes SET dni=?, nombre=?, telefono=?, direccion=?, razon_social=? WHERE " + "id_cliente=?";
 		
 		try {
 			connection = conexion.getConnection ();
 			ps = connection.prepareStatement (sql);
-			ps.setString (1, String.valueOf (cliente.getDni ()));
-			ps.setString (2, String.valueOf (cliente.getNombre ()));
-			ps.setString (3, String.valueOf (cliente.getDireccion ()));
+			ps.setString (1, cliente.getDni ().get ());
+			ps.setString (2, cliente.getNombre ().get ());
+			ps.setString (3, cliente.getTelefono ().get ());
+			ps.setString (4, cliente.getDireccion ().get ());
 			ps.setString (5, cliente.getRazonSocial ().get ());
 			ps.setInt (6, cliente.getId_cliente ().get ());
-			ps.executeUpdate ();
+			ps.execute ();
 			System.out.println ("Se modifico correctamente");
 			return true;
 		} catch (SQLException e) {
 			System.out.println ("No se puede modificar\n" + e.toString ());
-			
 			return false;
 		}
 	}

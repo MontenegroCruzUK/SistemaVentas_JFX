@@ -3,6 +3,7 @@ package com.ventas.sistemaventas_jfx.controller;
 import com.ventas.sistemaventas_jfx.model.Cliente;
 import com.ventas.sistemaventas_jfx.model.ClienteDado;
 import com.ventas.sistemaventas_jfx.model.Mensajes;
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -136,6 +137,7 @@ public class Cliente_Controller implements Initializable {
 	}
 	
 	private void limpiarCampos () {
+		txt_Id.setText ("");
 		txt_Dni.setText ("");
 		txt_Nombre.setText ("");
 		txt_Telefono.setText ("");
@@ -175,14 +177,15 @@ public class Cliente_Controller implements Initializable {
 				! txt_Telefono.getText ().isEmpty () || ! txt_Direccion.getText ().isEmpty () ||
 				! txt_RazonSocial.getText ().isEmpty ()) {
 				
-				cliente.setDni (new SimpleStringProperty (cliente.getDni ().get ()));
-				cliente.setDni (new SimpleStringProperty (cliente.getNombre ().get ()));
-				cliente.setDni (new SimpleStringProperty (cliente.getTelefono ().get ()));
-				cliente.setDni (new SimpleStringProperty (cliente.getDireccion ().get ()));
-				cliente.setDni (new SimpleStringProperty (cliente.getRazonSocial ().get ()));
-				cliente.setId_cliente (new SimpleIntegerProperty (cliente.getId_cliente ().get ()));
+				cliente.setDni (new SimpleStringProperty (txt_Dni.getText ()));
+				cliente.setNombre (new SimpleStringProperty (txt_Nombre.getText ()));
+				cliente.setTelefono (new SimpleStringProperty (txt_Telefono.getText ()));
+				cliente.setDireccion (new SimpleStringProperty (txt_Direccion.getText ()));
+				cliente.setRazonSocial (new SimpleStringProperty (txt_RazonSocial.getText ()));
+				cliente.setId_cliente (new SimpleIntegerProperty (Integer.parseInt (txt_Id.getText ())));
 				clienteDado.modificarCliente (cliente);
 				cargarDatosClientes ();
+				limpiarCampos ();
 			} else {
 				System.out.println ("Los campos están vacíos");
 			}
