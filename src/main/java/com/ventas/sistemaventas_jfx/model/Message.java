@@ -1,8 +1,11 @@
 package com.ventas.sistemaventas_jfx.model;
 
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
-public class Mensajes {
+import java.util.Optional;
+
+public class Message {
 	
 	public void confirmacion (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.CONFIRMATION);
@@ -20,11 +23,16 @@ public class Mensajes {
 		alert.showAndWait ();
 	}
 	
-	public void informacion (String titulo, String mensaje) {
+	public Boolean informacion (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.INFORMATION);
 		alert.setTitle (titulo);
 		alert.setHeaderText (null);
 		alert.setContentText (mensaje);
-		alert.showAndWait ();
+		Optional<ButtonType> result=alert.showAndWait ();
+		if (result.isPresent ()&&result.get ()==ButtonType.OK){
+			return true;
+		}else{
+			return false;
+		}
 	}
 }
