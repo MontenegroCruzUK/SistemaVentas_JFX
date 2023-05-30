@@ -7,8 +7,16 @@ import java.util.Optional;
 
 public class Message {
 	
-	public void confirmacion (String titulo, String mensaje) {
+	public void confirmation (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.CONFIRMATION);
+		alert.setTitle (titulo);
+		alert.setHeaderText (null);
+		alert.setContentText (mensaje);
+		alert.showAndWait ();
+	}
+	
+	public void warning (String titulo, String mensaje) {
+		Alert alert = new Alert (Alert.AlertType.WARNING);
 		alert.setTitle (titulo);
 		alert.setHeaderText (null);
 		alert.setContentText (mensaje);
@@ -23,16 +31,17 @@ public class Message {
 		alert.showAndWait ();
 	}
 	
-	public Boolean informacion (String titulo, String mensaje) {
+	public Boolean information (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.INFORMATION);
 		alert.setTitle (titulo);
 		alert.setHeaderText (null);
 		alert.setContentText (mensaje);
-		Optional<ButtonType> result=alert.showAndWait ();
-		if (result.isPresent ()&&result.get ()==ButtonType.OK){
+		Optional<ButtonType> result = alert.showAndWait ();
+		if (result.isPresent () && result.get () == ButtonType.OK) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
+	
 }

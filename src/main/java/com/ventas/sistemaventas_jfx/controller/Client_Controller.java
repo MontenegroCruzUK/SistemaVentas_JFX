@@ -1,7 +1,7 @@
 package com.ventas.sistemaventas_jfx.controller;
 
-import com.ventas.sistemaventas_jfx.model.Client;
-import com.ventas.sistemaventas_jfx.model.GivenClient;
+import com.ventas.sistemaventas_jfx.model.client.Client;
+import com.ventas.sistemaventas_jfx.model.client.GivenClient;
 import com.ventas.sistemaventas_jfx.model.Message;
 import com.ventas.sistemaventas_jfx.model.ValidateInformation;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -135,7 +135,7 @@ public class Client_Controller implements Initializable {
 		
 		givenClient.newRecordInTheDataBase (client);
 		
-		message.informacion ("Creando nuevo Cliente", "El Cliente fue creado con éxito");
+		message.information ("Creando nuevo Cliente", "El Cliente fue creado con éxito");
 		loadData ();
 		resetFields ();
 		
@@ -155,7 +155,7 @@ public class Client_Controller implements Initializable {
 	public void delete () {
 		
 		if (! txt_Id.getText ().isEmpty ()) {
-			if (message.informacion ("Confirmar eliminación", "¿Está seguro de eliminar?")) {
+			if (message.information ("Confirmar eliminación", "¿Está seguro de eliminar?")) {
 				int id = Integer.parseInt (txt_Id.getText ());
 				System.out.println ("Este es el Id = " + id);
 				givenClient.deleteInTheDataBase (id);
@@ -167,21 +167,19 @@ public class Client_Controller implements Initializable {
 	
 	public void upDate () {
 		if (txt_Id.getText ().isEmpty ()) {
-			Alert alert = new Alert (Alert.AlertType.WARNING);
-			alert.setTitle ("Advertencia");
-			alert.setHeaderText (null);
-			alert.setContentText ("Seleccione una fila");
-			alert.showAndWait ();
+			message.warning ("Advertencia", "Seleccione una fila");
+			
 		} else {
 			if (! txt_Dni.getText ().isEmpty () || ! txt_Name.getText ().isEmpty () ||
 				! txt_Phone.getText ().isEmpty () || ! txt_Address.getText ().isEmpty () ||
 				! txt_CompanyName.getText ().isEmpty ()) {
 				
 				client.setDni (new SimpleStringProperty (txt_Dni.getText ()));
-				client.setName (new SimpleStringProperty (txt_Name.getText ()));
+				client.setName (new SimpleStringProperty (validateData.capitalizeWords (txt_Name.getText ())));
 				client.setPhone (new SimpleStringProperty (txt_Phone.getText ()));
-				client.setAddress (new SimpleStringProperty (txt_Address.getText ()));
-				client.setCompanyName (new SimpleStringProperty (txt_CompanyName.getText ()));
+				client.setAddress (new SimpleStringProperty (validateData.capitalizeWords (txt_Address.getText ())));
+				client.setCompanyName (
+					new SimpleStringProperty (validateData.capitalizeWords (txt_CompanyName.getText ())));
 				client.setId (new SimpleIntegerProperty (Integer.parseInt (txt_Id.getText ())));
 				givenClient.modifyInTheDataBase (client);
 				loadData ();

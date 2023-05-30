@@ -42,10 +42,45 @@ public class ValidateInformation {
 		// Validar que el teléfono solo contenga números y esté en el rango adecuado
 		String phoneRegex = "^\\d{9}$"; // Expresión regular para 9 dígitos
 		
-		if (!phone.matches(phoneRegex)) {
-			message.error("Teléfono inválido", "El teléfono debe tener 9 dígitos numéricos");
+		if (! phone.matches (phoneRegex)) {
+			message.error ("Teléfono inválido", "El teléfono debe tener 9 dígitos numéricos");
 			return false;
 		}
 		return true;
+	}
+	
+	public boolean validateRuc (String ruc) {
+		// Validar que el teléfono solo contenga números y esté en el rango adecuado
+		String phoneRegex = "^\\d{13}$"; // Expresión regular para 9 dígitos
+		
+		if (! ruc.matches (phoneRegex)) {
+			message.error ("RUC inválido", "El RUC debe tener 13 dígitos numéricos");
+			return false;
+		}
+		return true;
+	}
+	
+	public String validaRuc (String ruc) {
+		// Validar que el RUC solo contenga números y tenga una longitud adecuada
+		String rucRegex = "^\\d{13}$"; // Expresión regular para 13 dígitos
+		
+		if (! ruc.matches (rucRegex)) {
+			message.error ("RUC inválido", "El RUC debe tener 13 dígitos numéricos");
+			return "";
+		}
+		
+		return ruc;
+	}
+	
+	public String validaPhone (String phone) {
+		// Validar que el teléfono solo contenga números y tenga una longitud adecuada
+		String phoneRegex = "^\\d{9}$"; // Expresión regular para 9 dígitos
+		
+		if (! phone.matches (phoneRegex)) {
+			message.error ("Teléfono inválido", "El teléfono debe tener 9 dígitos numéricos");
+			return "";
+		}
+		
+		return phone;
 	}
 }
