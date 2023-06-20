@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ventas.sistemaventas_jfx.controller.Supplier_Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ventas.sistemaventas_jfx.controller.Proveedores_Controller">
     <Pane prefHeight="70.0" prefWidth="1017.0" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <HBox alignment="CENTER" layoutX="-2.0" layoutY="4.0" prefHeight="70.0" prefWidth="1017.0" spacing="10.0">
             <MFXTextField fx:id="txt_Id" editable="false" floatMode="BORDER" floatingText="Id" minWidth="23.0" prefColumnCount="5" prefHeight="40.0" prefWidth="47.0" />

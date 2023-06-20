@@ -1,4 +1,4 @@
-package com.ventas.sistemaventas_jfx.model;
+package com.ventas.sistemaventas_jfx.model.login;
 
 public class Login {
 	private int id_vendedor;

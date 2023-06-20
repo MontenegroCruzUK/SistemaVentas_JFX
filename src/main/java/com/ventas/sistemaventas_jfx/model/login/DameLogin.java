@@ -1,11 +1,13 @@
-package com.ventas.sistemaventas_jfx.model;
+package com.ventas.sistemaventas_jfx.model.login;
+
+import com.ventas.sistemaventas_jfx.model.conexionDataBase.DataBaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class LoginDado {
+public class DameLogin {
 	private Connection connection;
 	private PreparedStatement ps;
 	private ResultSet rs;

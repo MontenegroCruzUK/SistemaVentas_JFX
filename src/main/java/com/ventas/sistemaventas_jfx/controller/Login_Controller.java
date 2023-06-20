@@ -1,15 +1,14 @@
 package com.ventas.sistemaventas_jfx.controller;
 
 import com.ventas.sistemaventas_jfx.ResourcesLoader;
-import com.ventas.sistemaventas_jfx.model.Login;
-import com.ventas.sistemaventas_jfx.model.LoginDado;
+import com.ventas.sistemaventas_jfx.model.login.Login;
+import com.ventas.sistemaventas_jfx.model.login.DameLogin;
 import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
@@ -56,7 +55,7 @@ public class Login_Controller implements Initializable {
 	@FXML
 	private Label lb_Mensaje;
 	Login newLogin = new Login ();
-	LoginDado newLoginDado = new LoginDado ();
+	DameLogin newLoginDado = new DameLogin ();
 	
 	
 	@Override

@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ValidateInformation {
-	Message message = new Message ();
+	Mensaje message = new Mensaje ();
 	
 	
 	public boolean validateDni (String dni) {

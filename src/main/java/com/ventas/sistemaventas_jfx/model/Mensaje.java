@@ -5,7 +5,7 @@ import javafx.scene.control.ButtonType;
 
 import java.util.Optional;
 
-public class Message {
+public class Mensaje {
 	
 	public void confirmation (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.CONFIRMATION);
