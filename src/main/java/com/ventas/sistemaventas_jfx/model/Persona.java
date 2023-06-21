@@ -1,5 +1,8 @@
 package com.ventas.sistemaventas_jfx.model;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Persona {
 	private int id;
 	
@@ -57,5 +60,39 @@ public class Persona {
 	
 	public void setCompanyName (String companyName) {
 		this.companyName = companyName;
+	}
+	
+	public boolean validarNombre (String name) {
+		String regexName = "[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+";
+		Pattern patternName = Pattern.compile (regexName);
+		Matcher matcherName = patternName.matcher (name);
+		return matcherName.matches ();
+	}
+	
+	public String ponerEnMayusculas (String name) {
+		StringBuilder result = new StringBuilder ();
+		boolean capitalize = true;
+		
+		for (char c : name.toCharArray ()) {
+			if (Character.isWhitespace (c)) {
+				capitalize = true;
+			} else if (capitalize) {
+				c = Character.toTitleCase (c);
+				capitalize = false;
+			}
+			result.append (c);
+		}
+		return result.toString ();
+	}
+	
+	public boolean validarTelefono (String phone) {
+		// Validar que el teléfono solo contenga números y esté en el rango adecuado
+		String phoneRegex = "^\\d{9}$"; // Expresión regular para 9 dígitos
+		
+		if (! phone.matches (phoneRegex)) {
+			Mensaje.error ("Teléfono inválido", "El teléfono debe tener 9 dígitos numéricos");
+			return false;
+		}
+		return true;
 	}
 }

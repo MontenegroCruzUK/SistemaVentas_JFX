@@ -1,53 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import io.github.palexdev.materialfx.controls.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="685.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.ventas.sistemaventas_jfx.controller.Cliente_Controller">
-    <Pane prefHeight="70.0" prefWidth="1017.0" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0"
-          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <HBox alignment="CENTER" layoutX="-2.0" layoutY="4.0" prefHeight="70.0" prefWidth="1017.0"
-              spacing="10.0">
-            <MFXTextField fx:id="txt_Id" editable="false" floatMode="BORDER" floatingText="Id" minWidth="33.0"
-                          prefColumnCount="5" prefHeight="40.0" prefWidth="33.0"/>
-            <MFXTextField fx:id="txt_Dni" floatMode="BORDER" floatingText="DNI" minWidth="63.0"
-                          prefColumnCount="5" prefHeight="40.0" prefWidth="99.0"/>
-            <MFXTextField fx:id="txt_Name" floatMode="BORDER" floatingText="Nombre" minWidth="70.0"
-                          prefColumnCount="5" prefHeight="40.0" prefWidth="115.0"/>
-            <MFXTextField fx:id="txt_Phone" floatMode="BORDER" floatingText="Teléfono" minWidth="70.0"
-                          prefColumnCount="5" prefHeight="40.0" prefWidth="83.0"/>
-            <MFXTextField fx:id="txt_Address" floatMode="BORDER" floatingText="Dirección" minWidth="70.0"
-                          prefColumnCount="5" prefHeight="40.0" prefWidth="141.0"/>
-            <MFXTextField fx:id="txt_CompanyName" floatMode="BORDER" floatingText="Razón Social"
-                          minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="153.0"/>
-            <MFXButton onAction="#add" prefHeight="40.0" prefWidth="69.0"
-                       style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff"
-                       text="Guardar"/>
-            <MFXButton onAction="#upDate" prefHeight="40.0" prefWidth="72.0"
-                       style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff"
-                       text="Actualizar"/>
-            <MFXButton onAction="#delete" prefHeight="40.0" prefWidth="64.0"
-                       style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff"
-                       text="Eliminar"/>
-            <MFXButton layoutX="905.0" layoutY="25.0" onAction="#cancel" prefHeight="40.0" prefWidth="72.0"
-                       style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff"
-                       text="Cancelar"/>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ventas.sistemaventas_jfx.controller.Cliente_Controller">
+    <Pane prefHeight="70.0" prefWidth="1017.0" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox alignment="CENTER" layoutX="-2.0" layoutY="4.0" prefHeight="70.0" prefWidth="1017.0" spacing="10.0">
+            <MFXTextField fx:id="txt_Id" editable="false" floatMode="BORDER" floatingText="Id" minWidth="33.0" prefColumnCount="5" prefHeight="40.0" prefWidth="33.0" />
+            <MFXTextField fx:id="txt_Dni" floatMode="BORDER" floatingText="DNI" minWidth="63.0" prefColumnCount="5" prefHeight="40.0" prefWidth="99.0" />
+            <MFXTextField fx:id="txt_Name" floatMode="BORDER" floatingText="Nombre" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="115.0" />
+            <MFXTextField fx:id="txt_Phone" floatMode="BORDER" floatingText="Teléfono" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="83.0" />
+            <MFXTextField fx:id="txt_Address" floatMode="BORDER" floatingText="Dirección" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="141.0" />
+            <MFXTextField fx:id="txt_CompanyName" floatMode="BORDER" floatingText="Razón Social" minWidth="70.0" prefColumnCount="5" prefHeight="40.0" prefWidth="153.0" />
+            <MFXButton fx:id="btn_Add" onAction="#add" prefHeight="40.0" prefWidth="69.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Guardar" />
+            <MFXButton onAction="#upDate" prefHeight="40.0" prefWidth="72.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Actualizar" />
+            <MFXButton onAction="#delete" prefHeight="40.0" prefWidth="64.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Eliminar" />
+            <MFXButton layoutX="905.0" layoutY="25.0" onAction="#cancel" prefHeight="40.0" prefWidth="72.0" style="-fx-background-color: #0288d1; -fx-background-size: 15px; -fx-text-fill: #ffffff" text="Cancelar" />
         </HBox>
     </Pane>
-    <Pane layoutX="14.0" layoutY="69.0" prefHeight="189.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0"
-          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
+    <Pane layoutX="14.0" layoutY="69.0" prefHeight="189.0" prefWidth="676.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
         <TableView fx:id="tbl_Clients" layoutX="-2.0" layoutY="2.0" prefHeight="616.0" prefWidth="1017.0">
             <columns>
-                <TableColumn fx:id="col_Id" prefWidth="42.0" text="ID"/>
-                <TableColumn fx:id="col_Dni" prefWidth="104.0" text="DNI"/>
-                <TableColumn fx:id="col_Name" prefWidth="209.0" text="Nombre"/>
-                <TableColumn fx:id="col_Phone" prefWidth="189.0" text="Teléfono"/>
-                <TableColumn fx:id="col_Address" prefWidth="272.0" text="Dirección"/>
-                <TableColumn fx:id="col_CompanyName" prefWidth="200.0" text="Razón Social"/>
+                <TableColumn fx:id="col_Id" prefWidth="42.0" text="ID" />
+                <TableColumn fx:id="col_Dni" prefWidth="104.0" text="DNI" />
+                <TableColumn fx:id="col_Name" prefWidth="209.0" text="Nombre" />
+                <TableColumn fx:id="col_Phone" prefWidth="189.0" text="Teléfono" />
+                <TableColumn fx:id="col_Address" prefWidth="272.0" text="Dirección" />
+                <TableColumn fx:id="col_CompanyName" prefWidth="200.0" text="Razón Social" />
             </columns>
         </TableView>
     </Pane>

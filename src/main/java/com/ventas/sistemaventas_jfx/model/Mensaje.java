@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public class Mensaje {
 	
-	public void confirmation (String titulo, String mensaje) {
+	public static void confirmation (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.CONFIRMATION);
 		alert.setTitle (titulo);
 		alert.setHeaderText (null);
@@ -15,7 +15,7 @@ public class Mensaje {
 		alert.showAndWait ();
 	}
 	
-	public void warning (String titulo, String mensaje) {
+	public static void warning (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.WARNING);
 		alert.setTitle (titulo);
 		alert.setHeaderText (null);
@@ -23,7 +23,7 @@ public class Mensaje {
 		alert.showAndWait ();
 	}
 	
-	public void error (String titulo, String mensaje) {
+	public static void error (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.ERROR);
 		alert.setTitle (titulo);
 		alert.setHeaderText (null);
@@ -31,7 +31,7 @@ public class Mensaje {
 		alert.showAndWait ();
 	}
 	
-	public Boolean information (String titulo, String mensaje) {
+	public static Boolean information (String titulo, String mensaje) {
 		Alert alert = new Alert (Alert.AlertType.INFORMATION);
 		alert.setTitle (titulo);
 		alert.setHeaderText (null);
@@ -43,5 +43,4 @@ public class Mensaje {
 			return false;
 		}
 	}
-	
 }

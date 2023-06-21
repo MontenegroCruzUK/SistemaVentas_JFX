@@ -1,7 +1,6 @@
 package com.ventas.sistemaventas_jfx.controller;
 
 import com.ventas.sistemaventas_jfx.model.Mensaje;
-import com.ventas.sistemaventas_jfx.model.ValidateInformation;
 import com.ventas.sistemaventas_jfx.model.proveedores.DameProveedor;
 import com.ventas.sistemaventas_jfx.model.proveedores.Proveedor;
 import io.github.palexdev.materialfx.controls.MFXButton;
@@ -21,7 +20,6 @@ public class Proveedores_Controller implements Initializable {
 	Proveedor supplier = new Proveedor ();
 	DameProveedor givenSupplier = new DameProveedor ();
 	Mensaje message = new Mensaje ();
-	ValidateInformation validateData = new ValidateInformation ();
 	@FXML
 	public MFXButton btn_Save;
 	@FXML
