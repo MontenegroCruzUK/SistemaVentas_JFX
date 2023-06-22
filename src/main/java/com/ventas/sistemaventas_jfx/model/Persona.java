@@ -1,11 +1,13 @@
 package com.ventas.sistemaventas_jfx.model;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Persona {
 	private int id;
-	
 	private String name;
 	private String phone;
 	private String address;
@@ -61,6 +63,25 @@ public class Persona {
 	public void setCompanyName (String companyName) {
 		this.companyName = companyName;
 	}
+	
+	public SimpleIntegerProperty get_Id () {
+		return new SimpleIntegerProperty (id);
+	}
+	public SimpleStringProperty get_Name () {
+		return new SimpleStringProperty (getName ());
+	}
+	public SimpleStringProperty get_Phone () {
+		return new SimpleStringProperty (getPhone ());
+	}
+	
+	public SimpleStringProperty get_Address () {
+		return new SimpleStringProperty (getAddress ());
+	}
+	
+	public SimpleStringProperty get_CompanyName () {
+		return new SimpleStringProperty (getCompanyName ());
+	}
+	
 	
 	public boolean validarNombre (String name) {
 		String regexName = "[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\\s]+";

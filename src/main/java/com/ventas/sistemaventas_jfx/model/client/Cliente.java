@@ -30,21 +30,6 @@ public class Cliente extends Persona {
 		this.dni = dni;
 	}
 	
-	public SimpleStringProperty get_Name () {
-		return new SimpleStringProperty (getName ());
-	}
-	
-	public SimpleStringProperty get_Phone () {
-		return new SimpleStringProperty (getPhone ());
-	}
-	
-	public SimpleStringProperty get_Address () {
-		return new SimpleStringProperty (getAddress ());
-	}
-	
-	public SimpleStringProperty get_CompanyName () {
-		return new SimpleStringProperty (getCompanyName ());
-	}
 	
 	public boolean validarDni(String dni){
 		String regexDni = "\\b\\d{8}[A-HJ-NP-TV-Z]\\b";

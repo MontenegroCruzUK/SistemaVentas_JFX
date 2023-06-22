@@ -12,12 +12,12 @@ public class DameLogin {
 	private PreparedStatement ps;
 	private ResultSet rs;
 	private final String QUERRY = "SELECT * FROM vendedor WHERE correo = ? AND password = ?";
-	DataBaseConnection myConnection = new DataBaseConnection ();
+	
 	Login newLogin = new Login ();
 	
 	public Login getLogin (String username, String password) {
 		try {
-			connection = myConnection.getConnection ();
+			connection = DataBaseConnection.getConnection ();
 			ps = connection.prepareStatement (QUERRY);
 			ps.setString (1, username);
 			ps.setString (2, password);

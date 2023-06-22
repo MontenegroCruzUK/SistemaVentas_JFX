@@ -8,7 +8,7 @@ public class DataBaseConnection {
 	static final String USER = "root";
 	static final String PASS = "";
 	
-	public Connection getConnection () {
+	public static Connection getConnection () {
 		Connection conn = null;
 		try {
 			// Registrar el driver JDBC

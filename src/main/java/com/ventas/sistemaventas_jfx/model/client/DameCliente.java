@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DameCliente {
-	DataBaseConnection myConnection = new DataBaseConnection ();
+	
 	Connection connection;
 	PreparedStatement ps;
 	ResultSet rs;
@@ -20,7 +20,7 @@ public class DameCliente {
 		String sql = "SELECT * FROM clients";
 		
 		try {
-			connection = myConnection.getConnection ();
+			connection = DataBaseConnection.getConnection ();
 			ps = connection.prepareStatement (sql);
 			rs = ps.executeQuery ();
 			
@@ -44,7 +44,7 @@ public class DameCliente {
 	public void nuevoUsuarioEnLaDB (Cliente cliente) {
 		String sql = "INSERT INTO clients  (dni, name, phone, address, company_name)VALUES (?,?,?,?,?)";
 		try {
-			connection = myConnection.getConnection ();
+			connection = DataBaseConnection.getConnection ();
 			ps = connection.prepareStatement (sql);
 			
 			ps.setString (1, cliente.getDni ());
@@ -67,7 +67,7 @@ public class DameCliente {
 	public void borrarClienteDeLaDB (int id) {
 		String sql = "DELETE FROM clients   WHERE id = ?";
 		try {
-			connection = myConnection.getConnection ();
+			connection = DataBaseConnection.getConnection ();
 			ps = connection.prepareStatement (sql);
 			ps.setInt (1, id);
 			ps.execute ();
@@ -85,7 +85,7 @@ public class DameCliente {
 	public void modificarClientesEnDB (Cliente clientes) {
 		String sql = "UPDATE clients SET dni=?, name=?, phone=?, address=?, company_name=? WHERE id=?";
 		try {
-			connection = myConnection.getConnection ();
+			connection = DataBaseConnection.getConnection ();
 			ps = connection.prepareStatement (sql);
 			ps.setString (1, clientes.getDni ());
 			ps.setString (2, clientes.getName ());

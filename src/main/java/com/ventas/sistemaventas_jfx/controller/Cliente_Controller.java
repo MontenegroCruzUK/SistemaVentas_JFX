@@ -75,7 +75,7 @@ public class Cliente_Controller implements Initializable {
 		
 	}
 	
-	private void cargarClientes () {
+	private void cargarClientes (){
 		col_Id.setCellValueFactory (cellData -> cellData.getValue ().get_Id ().asObject ());
 		col_Dni.setCellValueFactory (cellData -> cellData.getValue ().get_Dni ());
 		col_Name.setCellValueFactory (cellData -> cellData.getValue ().get_Name ());
